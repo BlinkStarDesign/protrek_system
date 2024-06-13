@@ -1,4 +1,5 @@
-const express = require('express');
+/*const express = require('express');
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -82,4 +83,26 @@ app.post('/register', async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-});
+});*/
+
+const express = require("express");
+const mysql = require('mysql');
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
+
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "signup"
+})
+
+app.post('./signup', (req, res) =>{
+  const sql = "INSERT INTO login (`name`, `email`, `password`) VALUES (?)";
+})
+
+app.listen(8080, () => {
+  console.log("listening");
+})

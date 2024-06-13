@@ -45,7 +45,7 @@ const Login = ()=> {
                 <input type='password'placeholder='Password' name='password'
                 onChange={handleInput}/>
             </div>
-            {errors.passsword && <span className='text-er'>{errors.passsword}</span>}
+            {errors.password && <span className='text-error'>{errors.password}</span>}
         </div>
         
         <button className='btn-login'>LOGIN</button>

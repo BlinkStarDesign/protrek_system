@@ -35,21 +35,28 @@ const handleSubmit =(event) =>{
     <div className='inputs'>
     <div className='input'>
             <img src={user_icon} alt=''/>
-            <input type='user-name' placeholder='Username'/>
+            <input type='user-name' placeholder='Username' name = 'name'
+            onChange={handleInput}/>
         </div>
+        {errors.name && <span className='text-error'>{errors.name}</span>}
 
         <div className='input'>
-            <img src={email_icon} alt=''/>
-            <input type='email' placeholder='Email'/>
-        </div>
+                <img src={email_icon} alt=''/>
+                <input type='email' placeholder='Email' name='email'
+                onChange={handleInput}/>
+            </div>
+            {errors.email && <span className='text-error'>{errors.email}</span>}
+           
 
-        <div className='input'>
-            <img src={password_icon} alt=''/>
-            <input type='password'placeholder='Password'/>
+            <div className='input'>
+                <img src={password_icon} alt=''/>
+                <input type='password'placeholder='Password' name='password'
+                onChange={handleInput}/>
+            </div>
+            {errors.password && <span className='text-error'>{errors.password}</span>}
         </div>
-    </div>
     
-    <button className='btn-login'>SIGNUP </button>
+    <button type='submit' className='btn-login'>SIGNUP </button>
     
     <button className='btn-create'>LOGIN</button>
     </form>

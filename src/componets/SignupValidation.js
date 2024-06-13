@@ -1,7 +1,7 @@
 function Validation(values) {
     // Declare an empty object to store validation errors
     let error = {}
-    
+
    /* Define a regular expression pattern to validate email and password format...on pasword it requires at least
       8 characters, including at least one uppercase letter, one lowercase and one digit*/
    const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -9,7 +9,7 @@ function Validation(values) {
 
    //Validation name field
    if(values.name ==="") {
-    error.name = "Nmae should not be empty"
+    error.name = "Name should not be empty"
    }
    else{
     error.name = ""
